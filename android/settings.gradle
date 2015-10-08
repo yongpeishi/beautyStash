@@ -1,0 +1,3 @@
+rootProject.name = 'beautyStash'
+
+include ':app'
