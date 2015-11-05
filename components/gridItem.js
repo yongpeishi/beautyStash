@@ -21,7 +21,9 @@ var GridItem = React.createClass( { displayName: 'GridItem',
 
 var style = StyleSheet.create({
   gridItem: {
-    flex: 1,
+    width: 100,
+    height: 100,
+    margin: 10,
     backgroundColor: "#eeeeee",
     borderRadius: 50
   },

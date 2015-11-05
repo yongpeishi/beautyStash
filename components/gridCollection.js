@@ -18,7 +18,7 @@ var GridCollection = React.createClass( { displayName: 'GridCollection',
 
   render: function() {
     return React.createElement(ListView, {
-      style: style.gridCollection,
+      contentContainerStyle: style.gridCollection,
       dataSource: this.state.dataSource,
       renderRow: function(rowData) {
         return React.createElement(GridItem, {
@@ -46,7 +46,8 @@ var GridCollection = React.createClass( { displayName: 'GridCollection',
 var style = StyleSheet.create({
   gridCollection: {
     flex: 1,
-    flexDirection: 'column',
+    flexWrap: 'wrap',
+    flexDirection: 'row',
     backgroundColor: "#0000ff",
   }
 })
