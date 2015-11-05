@@ -4,7 +4,6 @@ var GridItem = require('./gridItem');
 var {
   ListView,
   StyleSheet,
-  GridItem,
   AlertIOS,
   Text
 } = React;
@@ -22,9 +21,22 @@ var GridCollection = React.createClass( { displayName: 'GridCollection',
       style: style.gridCollection,
       dataSource: this.state.dataSource,
       renderRow: function(rowData) {
-        return React.createElement(Text, {
-          style: style.row,
-        },rowData)
+        return React.createElement(GridItem, {
+          title: rowData,
+          onPressHandler: function() {
+            return AlertIOS.alert(
+                "Alert title",
+                "Hello there",
+                [
+                  { text: 'Dismiss',
+                    onPress: function onPress() {
+                      return console.log('dismissed alert');
+                    }
+                  }
+                ]
+            )
+          }
+        })
       }
     })
   }
@@ -36,10 +48,6 @@ var style = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     backgroundColor: "#0000ff",
-  },
-  row: {
-    flex: 1,
-    backgroundColor: "#9999ff",
   }
 })
 

@@ -9,12 +9,13 @@ var {
 var GridItem = React.createClass( { displayName: 'GridItem',
   render: function() {
     return React.createElement(TouchableHighlight, {
-      onPress: this.props.onPressHandler,
-      style: style.gridItem
-    },
-    React.createElement(Text, {
-      style: style.gridItemText
-    }, this.props.title))
+        onPress: this.props.onPressHandler,
+        style: style.gridItem
+      },
+      React.createElement(Text, {
+        style: style.gridItemText
+      }, this.props.title)
+    )
   }
 });
 
@@ -26,7 +27,6 @@ var style = StyleSheet.create({
   },
   gridItemText: {
     flex: 1,
-    textAlign: 'center',
     fontSize: 20
   }
 })
