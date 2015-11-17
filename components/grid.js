@@ -8,17 +8,17 @@ var {
   Text
 } = React;
 
-var GridCollection = React.createClass( { displayName: 'GridCollection',
+var Grid = React.createClass( { displayName: 'Grid',
   getInitialState: function() {
     var ds = new ListView.DataSource( { rowHasChanged: (r1, r2) => r1 !== r2});
     return {
-      dataSource: ds.cloneWithRows(['Collection 1', 'Collection 2']),
+      dataSource: ds.cloneWithRows(['Collection 1', 'Collection 2', 'Collection 3', 'Collection 4']),
     };
   },
 
   render: function() {
     return React.createElement(ListView, {
-      contentContainerStyle: style.gridCollection,
+      contentContainerStyle: style.grid,
       dataSource: this.state.dataSource,
       renderRow: function(rowData) {
         return React.createElement(GridItem, {
@@ -44,7 +44,7 @@ var GridCollection = React.createClass( { displayName: 'GridCollection',
 });
 
 var style = StyleSheet.create({
-  gridCollection: {
+  grid: {
     flex: 1,
     flexWrap: 'wrap',
     flexDirection: 'row',
@@ -52,5 +52,4 @@ var style = StyleSheet.create({
   }
 })
 
-
-module.exports = GridCollection;
+module.exports = Grid;
