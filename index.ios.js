@@ -23,8 +23,7 @@ var beautyStash = React.createClass({
 
 var styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center'
+    flex: 1
   }
 });
 

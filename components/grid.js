@@ -45,9 +45,7 @@ var Grid = React.createClass( { displayName: 'Grid',
 
 var style = StyleSheet.create({
   grid: {
-    flex: 1,
-    flexWrap: 'wrap',
-    flexDirection: 'row',
+    flexDirection: 'column',
     backgroundColor: "#0000ff",
   }
 })

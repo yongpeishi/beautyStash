@@ -21,14 +21,14 @@ var GridItem = React.createClass( { displayName: 'GridItem',
 
 var style = StyleSheet.create({
   gridItem: {
-    width: 100,
     height: 100,
-    margin: 10,
+    marginBottom: 8,
     backgroundColor: "#eeeeee",
-    borderRadius: 50
+    alignItems: 'center',
+    justifyContent: 'center',
+//      flexDirection: 'row'
   },
   gridItemText: {
-    flex: 1,
     fontSize: 20
   }
 })
